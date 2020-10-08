@@ -1,0 +1,20 @@
+.part1 h2 {
+    color:red;
+}
+.part1 p{
+    color:white;
+    background:black;
+}
+.part2 h2{
+    color:green
+}
+.part2 p{
+    color:green;
+    background:darkred;
+}
+.part3{
+    color:green;
+}
+#MyID{
+    color:green;
+}

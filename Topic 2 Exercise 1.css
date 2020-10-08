@@ -1,0 +1,21 @@
+
+section {
+    width:50%;
+    display:block;
+    float:right;
+}
+
+.csy1018{
+    background-color:purple;
+}
+.csy1019{
+    background-color: greenyellow;
+}
+
+.csy1014 {
+    background-color: grey;
+}
+.csy1020 {
+    background-color: indianred;
+    float: none;
+}
