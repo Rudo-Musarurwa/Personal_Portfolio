@@ -3,10 +3,16 @@ section {
     width:50%;
     display:block;
     float:right;
+    height: 50;
 }
-
+h  {
+    background-color:blue;
+    color: rgb(250, 239, 239);
+    display: inline;
+    font: 1em sans-serif;
+} 
 .csy1018{
-    background-color:purple;
+    background-color:rgb(119, 12, 119);
 }
 .csy1019{
     background-color: greenyellow;
@@ -17,5 +23,10 @@ section {
 }
 .csy1020 {
     background-color: indianred;
-    float: none;
+}
+.csy1026{
+    background-color: blue;
+}
+.csy1017{
+    background-color: khaki;
 }
