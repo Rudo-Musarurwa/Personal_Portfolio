@@ -1,1 +1,35 @@
-This is an exercise
+body{
+    display:grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header"
+                         "nav main aside"
+                         "footer footer footer";
+}
+header {
+    background-color : purple;
+    color: white;
+    padding: 20px;
+    grid-area:header;
+}
+
+nav{
+    background-color: cyan;
+    grid-area:nav;
+}
+
+main{
+    background-color: black;
+    color: white;
+    grid-area:main;
+}
+
+aside{
+    background-color: chartreuse;
+    grid-area:aside;
+}
+footer{
+    background-color: crimson;
+    color : white;
+    grid-area:footer;
+}
