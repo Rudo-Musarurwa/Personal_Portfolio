@@ -1,11 +1,10 @@
 body{
     display:grid;
-    grid-template-columns: auto;
-    grid-template-rows: 40% 20% 40% 20%;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: auto;
     grid-template-areas: "header header header"
-                         "nav nav nav"
-                         "main  main aside"
-                         "footer footer footer";
+                         "nav main aside"
+                          "footer footer footer";
 }
 header {
     background-color : purple;
@@ -44,4 +43,3 @@ li{
 h1{
     display: inline;
 }
-
