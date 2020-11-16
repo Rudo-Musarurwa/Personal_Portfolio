@@ -1,0 +1,147 @@
+body{
+    display:grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: auto;
+    grid-template-areas:"header header header"
+                        "nav nav nav"
+                        "main main aside"
+                        "footer footer aside";
+    font-family: Georgia, serif;
+    background-color:rgb(0, 0, 0);
+}
+.shownav:before {
+    content: '';
+     position: absolute;
+     width: 100%;
+     top: 0.3em;
+     left: 0px;
+     border-top: 0.2em solid #fff;
+    }
+
+.shownav {
+    height: 0.8em;
+    width: 1.25em;
+    display: block;
+     border-top: 0.2em solid white;
+    border-bottom: 0.2em solid white;
+    border-radius: 0.1em;
+ }
+
+
+Nav{ 
+    grid-area:nav;
+    float: right;
+    background-color: rgba(245, 245, 245, 0.144);
+}
+main{
+    grid-area:main;  
+}
+
+aside{
+    grid-area:aside;
+    background-color: rgb(255, 159, 255);
+}
+
+footer{
+    grid-area:footer;
+    background-color: rgb(255, 159, 255);
+}
+
+header {
+    display:block;
+    background-color:rgb(187, 12, 129);
+    font-style: oblique;
+    padding:5px;
+    margin:10px;
+    grid-area:header;
+}
+
+.nonsense{
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: rgb(255, 159, 255);
+    padding: 1em;
+    margin:5px;
+    border:3px solid rgb(121, 18, 121);
+    background-color: rgb(44, 9, 44);
+    ;
+}
+.Unique{
+    display:block;
+}
+h1 {
+    display: block;
+    Background-color:rgb(12, 6, 14);
+    font-style: oblique 40deg;
+    font-weight: bold;
+    color:rgb(206, 0, 51);
+    margin:20px;
+    Border: 5px; 
+}
+
+p{
+    color:rgb(206, 0, 51);
+    margin:30px;
+}
+
+li{
+    display:block;
+    font-weight: bolder;
+    color:black;
+    margin:20px;
+    background-color:rgb(121, 18, 121) ;
+    border:5px solid rgb(121, 18, 121);
+}
+
+a {
+    color:black;
+}
+a:hover {
+    color: red;
+    }
+/* Sets the background to red when the body
+isn't targeted */
+body {
+    background-color: red;
+}
+/* Sets the background to green when the body
+    is targeted */
+body:target {
+    background-color: black;
+}
+
+/*
+When the target isn't set, hide the "off"
+button and show the "on" button
+*/
+#clicked .on {display: block;}
+#clicked .off {display: none;}
+/*
+When the target is set, hide the "on"
+button and show the "off" button
+*/
+#clicked:target .on {display: none;}
+#clicked:target .off {display: block;}
+nav ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    text-align: center;
+ }
+ nav > ul > li {
+    position: relative;
+}
+nav ul ul {
+    position: absolute;
+    display: block;
+    background-color:rgb(255, 159, 255);
+    padding: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    pointer-events: none;
+}
+nav > ul > li:hover ul {
+    opacity: 1;
+    pointer-events: auto;
+}

@@ -1,0 +1,9 @@
+nav {
+    display: block;
+    background-color: rgb(121,18,121);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100vh;
+   }
