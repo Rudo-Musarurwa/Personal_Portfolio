@@ -1,105 +1,78 @@
 *{
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
+    margin:0;
+    padding:0;
 }
 
-body{
-    height: 100vh;
-    background-color:whitesmoke;
-    background-position: center;
-    background-size:cover;
-    width:100%;
-    display:grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-rows: "header header header"
-                        "nav nav nav"
-                        "main main main"
-                        "footer footer footer";
-}
-/*sets the background for the header*/
-header{ 
-    background-color:  teal;
-    grid-area:header;
-    opacity: 0;
-}
-
-header .header-link{
-
-    width: auto;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 24px;
-    font-weight:bold;
-    color:whitesmoke;
-    text-transform: uppercase;
-    display:block;
-    margin: 0 auto;
-    text-align: center;
-    padding:20px;
-
-}
-nav{
+/** The following css code is for the index.html page**/
+.About{
     width: 100%;
-    background-color: teal;
-    grid-area:nav;
 }
-nav ul{
-   margin: 0 auto;
-   display: block;
-   width: fit-content;
+.logo{
+    display: none;
+    height: 20%;
+    
 }
-nav ul li{
-   display: inline;
-   float: left;
-   list-style: none;
-   padding:10px;
-   background-color: teal ;
-
-}
-
-nav ul li a{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
-    color: whitesmoke;
-}
-main{
-    grid-area:main;
-}
-/**places wallpaper for index intro**/
-/** set font size and family foe intro text **/
-.intro{
+.image-info{
     width:100%;
-    height: calc(100vh - 100px);
-    /**background-image: url(99791.jpg);**/
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    font-family: fantasy;
-    font-size: 35px;
-    font-weight: 500;
-    text-align: center;
-    text-shadow: 3px 4px black;
-    color: whitesmoke;
 }
-/** To edit the about me__index text**/
-.aboutme h3{
-    font-size: 35px;
-    font-weight: 500;
-    font-family: 'Bangers', cursive;
-    text-align: center;
-    color: black;
+.image-info h1{
+    padding: 30px 30px 20px;
+    font-family: arial;
+    font-size: 100px;
+    color: #111;
+    line-height: 44px;
 }
-.aboutme p{
-    font-size: 18px;
-    font-weight:normal;
-    font-family: sans-serif;
-    text-align: center;
-    color: black;
-    display:block;
-    padding:5px;
+.image-info p{
+    padding: 0px 30px 20px;
+    font-family: arial;
+    font-size: 16px;
+    color: #111;
+    line-height: 24px;
+
 }
 
-footer{
-    grid-area: footer;
+.codeimage{
+    width: 100%;
 }
+
+/** this is to specify the style for ipad or tablet screens**/
+@media only screen and (min-width: 768px){
+    .logo{
+        display: block;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    .About{
+        width: 600px;
+        margin: 0 auto;
+    }
+    .image-info h1{
+        padding: 20px 0px 0px 30px;
+       
+    }
+    .image-info p{
+        padding: 20px 0px 0px 30px;
+       
+    }
+    .codeimage{
+        padding-top: 40px;
+    
+    }
+}
+
+/** this is to specify thr style for desktop screens**/
+@media only screen and (min-width: 1000px){
+    .About{
+        width: 1000px;
+       
+    }
+    .image-info{
+        width:50%;
+        float:right;
+    }
+    .codeimage{
+        padding-top: 0px;
+        width:100%;
+    }
+}
+
