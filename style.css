@@ -2,77 +2,129 @@
     margin:0;
     padding:0;
 }
-
+/**the following is based of mobile screen measurements**/
 /** The following css code is for the index.html page**/
-.About{
+/**content contains main tag attributes**/
+.content{
+    height: 100vh;
     width: 100%;
+    /**background-image: url(wall2.png);**/
+    background-color: teal;
+    background-position: center;
+    background-size: cover;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
 }
+a:hover {
+    color:#bc1823;
+    }
 .logo{
-    display: none;
-    height: 20%;
+    width: 100px;
+    cursor: pointer;
+    display: inline-block;
+}
+.index-hamburger:before {
+    float:right;
+    content: '';
+     position: absolute;
+     width: 100%;
+     top: 0.3em;
+     left: 0px;
+     border-top: 0.3em solid #fff;
+     background-color: black;
+}
+
+.index-hamburger {
+    float:right;
+    position:relative;
+    height: 0.8em;
+    width: 1.25em;
+    display: block;
+    border-top: 0.2em solid white;
+    border-bottom: 0.2em solid white;
+    border-radius: 0.1em;
+    
+ }
+.navbar{
+    width: 100%;
+    height:10vh;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    float:left;
+
+}
+.index-nav{
+    flex:1;
+    padding-left: 30px;
+    padding-top: 30px;
+    background-color: whitesmoke;
     
 }
-.image-info{
-    width:100%;
+.index-nav ul li{
+    display:block;
+    list-style: none;
+    margin: 0px 20px;
+
 }
-.image-info h1{
-    padding: 30px 30px 20px;
-    font-family: arial;
-    font-size: 100px;
-    color: #111;
-    line-height: 44px;
-}
-.image-info p{
-    padding: 0px 30px 20px;
-    font-family: arial;
-    font-size: 16px;
-    color: #111;
-    line-height: 24px;
+.index-nav ul li a{
+    text-decoration: none;
+    color: #333;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
 }
 
-.codeimage{
-    width: 100%;
+.index-about{
+    text-align: left;
+     padding-left: 2px;
+    margin-left: 10%;
+    margin-top:20%;
+}
+.index-about h1{
+    font-size: 50px;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color:whitesmoke;
+}
+.index-about p{
+    font-size: 20px;
+    color: black;
+    margin: 20px;
+}
+.index-about .index-button{
+    display: inline-block;
+    background: linear-gradient(45deg, black black);
+    border-radius: 6px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color:whitesmoke;
+    box-shadow: 3px 8px 22px rgb(8, 8, 8);
 }
 
+.wallpaper{
+    height:50%;
+    position:absolute;
+    bottom: 0;
+    right:0px;
+    transition: 30ms;
+    
+}
+.index-foot{
+    background-color: teal;
+}
 /** this is to specify the style for ipad or tablet screens**/
 @media only screen and (min-width: 768px){
-    .logo{
-        display: block;
-        width: 100%;
-        padding-bottom: 30px;
-    }
-    .About{
-        width: 600px;
-        margin: 0 auto;
-    }
-    .image-info h1{
-        padding: 20px 0px 0px 30px;
-       
-    }
-    .image-info p{
-        padding: 20px 0px 0px 30px;
-       
-    }
-    .codeimage{
-        padding-top: 40px;
     
-    }
 }
 
 /** this is to specify thr style for desktop screens**/
 @media only screen and (min-width: 1000px){
-    .About{
-        width: 1000px;
-       
-    }
-    .image-info{
-        width:50%;
-        float:right;
-    }
-    .codeimage{
-        padding-top: 0px;
-        width:100%;
-    }
+    
 }
 
