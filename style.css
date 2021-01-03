@@ -58,17 +58,21 @@ a:hover {
 
 }
 .index-nav{
-    flex:1;
+    display: inline;
+    height:30px;
     padding-left: 30px;
     padding-top: 30px;
     background-color: whitesmoke;
-    
+    top:0;
+    position:relative;
 }
 .index-nav ul li{
     display:block;
-    list-style: none;
-    margin: 0px 20px;
-
+    list-style:none;
+    font-weight: bolder;
+    margin:10px;
+    background-color:teal ;
+    border:5px solid transparent;
 }
 .index-nav ul li a{
     text-decoration: none;
@@ -77,6 +81,9 @@ a:hover {
     padding-bottom: 10px;
 
 }
+.index-nav ul li a:hover {
+    color:#bc1823;
+    }
 
 .index-about{
     text-align: left;
