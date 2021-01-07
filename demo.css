@@ -124,12 +124,20 @@ main .index-button{
 .port-content{
    width:100%;
    height: calc(100vh - 100px);
-   background-image: url(coderimage.png);
    background-repeat: no-repeat;
+   background-color: rgb(8, 8, 14);
    background-position: center;
    background-size: cover;
-   position: relative;
+   position: absolute;
    
+}
+main .wallpaper{
+    height: 70%;
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    transition: 30ms;
+}
 }
 .port-content h1{
     font-size: 60px;
