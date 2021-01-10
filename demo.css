@@ -76,10 +76,11 @@ main .index-button{
     display:none;
     opacity: 0;
 }
+/**Footer styles**/
 
 /**css styles for portfolio**/
 /**This sets the dimensions for the logo**/
-.logo{
+.port-logo{
     width: 160px;
     height: 160px;
     cursor: pointer;
@@ -113,31 +114,35 @@ header .port-header .logo{
 }
 
 nav .port-nav{
-    display: block;
     grid-area: port-nav;
     height: 75px;
     width: 100%;
 }
-nav .port-nav ul{
+.port-nav ul{
     margin: 0 auto;
-    display: block;
+   
     
 }
+/**shows the portfolio navigation**/
 nav .port-nav ul li{
   display:block; 
-  float: left;
-  list-style: none;
-  padding: 0 10px;
- 
 }
 
 
 /** styles for nav links**/
-nav .port-nav ul li a{
+.port-nav ul li a{
     font-family:'Dancing Script', cursive;
     font-size: 22px;
     font-weight: 900 bold;
     color:#111;
+    
+}
+.port-nav ul li {
+    display:block; 
+    float: right;
+    list-style: none;
+    padding: 0 10px;
+
 }
 main .port-main{
     grid-area: port-main;
@@ -213,6 +218,8 @@ main .port-button{
 
 /** this is to specify thr style for desktop screens**/
 @media only screen and (min-width: 1000px){
-    
+    main .port-content div{
+        display: inline;
+    }
 }
 
