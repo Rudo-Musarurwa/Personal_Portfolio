@@ -77,7 +77,21 @@ main .index-button{
     opacity: 0;
 }
 /**Footer styles**/
-
+.index-foot{
+    padding:5px 5px;
+    float: right;
+    margin-bottom: 0;
+    position: relative;
+}
+.index-foot ul li{
+    float:left;
+    padding:5px 5px;
+    list-style: none;
+    
+}
+.index-foot ul li a{
+    color:black;
+}
 /**css styles for portfolio**/
 /**This sets the dimensions for the logo**/
 .port-logo{
@@ -211,15 +225,28 @@ main .image-box4{
     background-color: whitesmoke;
 }
 /**hide button in mobile view**/
-main .port-button{
+/**main .port-button{
     display:none;
     opacity: 0;
-}
+}**/
+
 
 /** this is to specify thr style for desktop screens**/
 @media only screen and (min-width: 1000px){
-    main .port-content div{
-        display: inline;
+    main .image-box{
+        
+    }
+    main .image-box1{
+        
+    }
+    main .image-box2{
+        
+    }
+    main .image-box3{
+        
+    }
+    main .image-box4{
+        
     }
 }
 
