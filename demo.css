@@ -178,13 +178,20 @@ main .port-content{
     right: 0px;
     transition: 30ms;
 }**/
+main .port-content .image-box{
+    background-image: url(iceberg.jpg);
+    
+}
+main .port-content .image-box1{
+    background-image: url(99791.jpg);
+    background-size: cover;
+}
 
 main .port-content h2{
     font-size: 40px;
     color: #111;
     font-family:'Dancing Script', cursive;
     line-height: 40px;
-    font-weight: 900 bold;
     text-align: center;
     text-shadow: 2px 2px 10px #111;
 }
@@ -193,37 +200,17 @@ main .image-box{
     padding-top: 15px;
     margin:15px;
     width: calc(100% - 30px);
-    height: 80px ;
+    height: 65px ;
     background-color: whitesmoke;
 }
 main .image-box1{
     padding-top: 15px;
     margin:15px;
     width: calc(100% - 30px);
-    height: 80px ;
+    height: 65px ;
     background-color: whitesmoke;
 }
-main .image-box2{
-    padding-top: 15px;
-    margin:15px;
-    width: calc(100% - 30px);
-    height: 80px ;
-    background-color: whitesmoke;
-}
-main .image-box3{
-    padding-top: 15px;
-    margin:15px;
-    width: calc(100% - 30px);
-    height: 80px ;
-    background-color: whitesmoke;
-}
-main .image-box4{
-    padding-top: 15px;
-    margin:15px;
-    width: calc(100% - 30px);
-    height: 80px ;
-    background-color: whitesmoke;
-}
+
 /**hide button in mobile view**/
 /**main .port-button{
     display:none;
@@ -234,19 +221,27 @@ main .image-box4{
 /** this is to specify thr style for desktop screens**/
 @media only screen and (min-width: 1000px){
     main .image-box{
-        
+       margin: 10px 10px 0;
+       height: 200px;
+       padding-right: 10;
     }
     main .image-box1{
-        
+        margin: 10px 10px 0;
+        height: 200px;
+        padding-right: 10;
+     }
+    main .image-box{
+        width: calc(25% - 60px) ;
     }
-    main .image-box2{
-        
+    main .image-box1{
+        width: calc(50% - 60px);
+     }
+    
+    main .port-content div{
+        float:right;
     }
-    main .image-box3{
-        
-    }
-    main .image-box4{
-        
+    .port-content{
+        align-content: center;
     }
 }
 
