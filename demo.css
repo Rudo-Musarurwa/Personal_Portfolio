@@ -330,16 +330,16 @@ body .cv-body{
     display:grid;
     grid-template-columns: auto;
     grid-template-rows: 20% 60% 20%;
-    grid-template-areas:"port-header port-header port-header"
-                        "port-nav port-nav port-nav"
-                        "port-main port-main port-main ";
+    grid-template-areas:"cv-header cv-header cv-header"
+                        "cv-nav cv-nav cv-nav"
+                        "cv-main cv-main cv-main ";
 }
 
 header .cv-header{
     background-color: #a6a6a6;
     width:100%;
     height:160px;
-    grid-area: -header;
+    grid-area: cv-header;
     
 }
 
@@ -349,26 +349,25 @@ header .cv-header .logo{
   background-color: #a6a6a6;
 }
 
-nav .cv-nav{
+.cv-nav {
     grid-area: cv-nav;
-    height: 75px;
+    height: 30px;
     width: 100%;
 }
 
 .cv-nav ul{
     margin: 0 auto;
-   
-    
 }
 
-/**shows the portfolio navigation**/
-nav .cv-nav ul li{
+/**shows the cv navigation**/
+.cv-nav  ul li{
     display:block; 
   }
   
   
   /** styles for nav links**/
-  .cv-nav ul li a{
+  
+.cv-nav ul li a{
       font-family:'Dancing Script', cursive;
       font-size: 22px;
       font-weight: 900 bold;
@@ -376,36 +375,28 @@ nav .cv-nav ul li{
       
   }
 
-  .cv-nav ul li {
+.cv-nav ul li {
       display:block; 
-      float: right;
+      float: left;
       list-style: none;
       padding: 0 10px;
   
   }
 
-  main .cv-main{
+ /**sets cv-main to grid area**/
+ main .cv-main{
       grid-area: cv-main;
   }
 
-main{
+main .cv-main{
     width:100%;
     height: calc(100vh - 100px);
-    background-repeat: no-repeat;
     background-color: rgb(8, 8, 14);
-    background-position: center;
-    background-size: cover;
-   
+    position: absolute;
  }
 
-main .cv-wallpaper{
-     height: 30%;
-     position: absolute;
-     bottom: 0;
-     right: 0px;
-     transition: 30ms;
- }
- main  .resume {
+
+ main .resume {
     display: grid;
     grid-template-columns: 50 50;
     grid-template-rows: auto;
@@ -414,6 +405,9 @@ main .cv-wallpaper{
     "about about"
     "education education"
     "skills skills";
+  }
+  .resume{
+      text-align: center;
   }
   
 section{
@@ -434,32 +428,56 @@ section{
     display:block;
     grid-area : about;
     color: whitesmoke;
-    margin-left: 5px;
+    padding: 15px;
   }
 .about h2{
     font-family: 'Dancing Script';
     font-size: 30px;
+}
+.about p{
+    font-family: sans-serif;
+    font-size: 15px;
 }
 
 .education {
     display:block;
     grid-area : education;
     color:whitesmoke;
-    margin-left: 5px;
+    padding: 10px;
   }
 .education h2{
     font-family: 'Dancing Script';
     font-size: 30px;
   }
+.education p{
+    font-family: sans-serif;
+    font-size: 16px;
+}
   .skills {
     display:block;
     grid-area : skills;
     color: whitesmoke;
-    margin-left: 5px;
+    padding: 10px;
   }
   .skills h2{
     font-family: 'Dancing Script';
     font-size: 30px;
   }
-  
-  
+  .skills p{
+    font-family: sans-serif;
+    font-size: 16px;
+}
+main .cv-wallpaper{
+    display: none;
+}
+
+/** this is to specify thr style for desktop screens**/
+@media only screen and (min-width: 1000px){
+main .cv-wallpaper{
+    height: 60%;
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    transition: all 5s ease-in-out;
+}
+}
