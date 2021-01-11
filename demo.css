@@ -9,14 +9,12 @@
     display: block;
 }
 .index-body{
-    display:grid;
-    
+    display:grid;   
 }
 .index-header{
     background-color: #a6a6a6;
     width:100%;
     height:75;
-    
 }
 .index-header .logo{
   width:160px;
@@ -33,7 +31,6 @@
   float: left;
   list-style: none;
   padding: 0 10px;
-
 }
 /** styles for nav links**/
 .index-nav ul li a{
@@ -50,8 +47,7 @@
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
-   position: relative;
-   
+   position: relative; 
 }
 .index-content h1{
     font-size: 60px;
@@ -92,6 +88,8 @@ main .index-button{
 .index-foot ul li a{
     color:black;
 }
+
+
 /**css styles for portfolio**/
 /**This sets the dimensions for the logo**/
 .port-logo{
@@ -102,9 +100,11 @@ main .index-button{
     background-color: #a6a6a6;
     padding-left: 80px;
 }
+
 header{
     background-color:#a6a6a6;
 }
+
 /** sets display grid for the body**/
 body .port-body{
     display:grid;
@@ -114,6 +114,7 @@ body .port-body{
                         "port-nav port-nav port-nav"
                         "port-main port-main port-main ";
 }
+
 header .port-header{
     background-color: #a6a6a6;
     width:100%;
@@ -121,6 +122,7 @@ header .port-header{
     grid-area: port-header;
     
 }
+
 header .port-header .logo{
   width:160px;
   text-align: center;
@@ -132,11 +134,13 @@ nav .port-nav{
     height: 75px;
     width: 100%;
 }
+
 .port-nav ul{
     margin: 0 auto;
    
     
 }
+
 /**shows the portfolio navigation**/
 nav .port-nav ul li{
   display:block; 
@@ -151,6 +155,7 @@ nav .port-nav ul li{
     color:#111;
     
 }
+
 .port-nav ul li {
     display:block; 
     float: right;
@@ -158,9 +163,11 @@ nav .port-nav ul li{
     padding: 0 10px;
 
 }
+
 main .port-main{
     grid-area: port-main;
 }
+
 main .port-content{
    width:100%;
    height: calc(100vh - 100px);
@@ -171,6 +178,7 @@ main .port-content{
    position: absolute;
    
 }
+
 /**main .wallpaper{
     height: 70%;
     position: absolute;
@@ -178,10 +186,12 @@ main .port-content{
     right: 0px;
     transition: 30ms;
 }**/
+
 main .port-content .image-box{
     background-image: url(iceberg.jpg);
     
 }
+
 main .port-content .image-box1{
     background-image: url(99791.jpg);
     background-size: cover;
@@ -203,6 +213,7 @@ main .image-box{
     height: 65px ;
     background-color: whitesmoke;
 }
+
 main .image-box1{
     padding-top: 15px;
     margin:15px;
@@ -220,19 +231,23 @@ main .image-box1{
 
 /** this is to specify thr style for desktop screens**/
 @media only screen and (min-width: 1000px){
+
     main .image-box{
        margin: 10px 10px 0;
        height: 200px;
        padding-right: 10;
     }
+
     main .image-box1{
         margin: 10px 10px 0;
         height: 200px;
         padding-right: 10;
      }
+
     main .image-box{
         width: calc(25% - 60px) ;
     }
+
     main .image-box1{
         width: calc(50% - 60px);
      }
@@ -240,8 +255,211 @@ main .image-box1{
     main .port-content div{
         float:right;
     }
+
     .port-content{
         align-content: center;
     }
 }
 
+/**css styles are for Contact page**/
+main {
+    width:100%;
+    height: calc(100vh - 100px);
+    /**background-image: url(coderimage.png);**/
+    background-repeat: no-repeat;
+    background-color: rgb(8, 8, 14);
+    background-position: center;
+    background-size: cover; 
+}
+
+.contact-title{
+    transition: all 4s ease-in-out; 
+}
+
+.contact-title h1{
+    color:whitesmoke;
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Dancing Script';
+    text-shadow: 20 20 black;
+}
+
+.contact-title p{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 40px;
+}
+
+main .contact-form{
+    color:white;
+    text-align: center;
+    margin-top: 50px;
+    transition: all 5s ease-in-out;
+}
+
+.form-code{
+    width:300px;
+    background: 50% transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid gray;
+    color:whitesmoke;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+input{
+    height: 45px;
+}
+/** this is to specify thr style for desktop screens**/
+@media only screen and (min-width: 1000px){
+    .form-code{
+        width:600px;
+        background: 50% transparent;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid gray;
+        color:whitesmoke;
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+}
+
+/**CSS Styles for CV **/
+body .cv-body{
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20% 60% 20%;
+    grid-template-areas:"port-header port-header port-header"
+                        "port-nav port-nav port-nav"
+                        "port-main port-main port-main ";
+}
+
+header .cv-header{
+    background-color: #a6a6a6;
+    width:100%;
+    height:160px;
+    grid-area: -header;
+    
+}
+
+header .cv-header .logo{
+  width:160px;
+  text-align: center;
+  background-color: #a6a6a6;
+}
+
+nav .cv-nav{
+    grid-area: cv-nav;
+    height: 75px;
+    width: 100%;
+}
+
+.cv-nav ul{
+    margin: 0 auto;
+   
+    
+}
+
+/**shows the portfolio navigation**/
+nav .cv-nav ul li{
+    display:block; 
+  }
+  
+  
+  /** styles for nav links**/
+  .cv-nav ul li a{
+      font-family:'Dancing Script', cursive;
+      font-size: 22px;
+      font-weight: 900 bold;
+      color:#111;
+      
+  }
+
+  .cv-nav ul li {
+      display:block; 
+      float: right;
+      list-style: none;
+      padding: 0 10px;
+  
+  }
+
+  main .cv-main{
+      grid-area: cv-main;
+  }
+
+main{
+    width:100%;
+    height: calc(100vh - 100px);
+    background-repeat: no-repeat;
+    background-color: rgb(8, 8, 14);
+    background-position: center;
+    background-size: cover;
+   
+ }
+
+main .cv-wallpaper{
+     height: 30%;
+     position: absolute;
+     bottom: 0;
+     right: 0px;
+     transition: 30ms;
+ }
+ main  .resume {
+    display: grid;
+    grid-template-columns: 50 50;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "name name"
+    "about about"
+    "education education"
+    "skills skills";
+  }
+  
+section{
+      float: left;
+  }
+.name {
+    display: block;
+    grid-area : name;
+    color: #a6a6a6;
+    font-family: 'Dancing Script';
+    font-size: 60px;
+    font-weight: 600;
+    text-shadow: 2px 2px #a6a6a6;
+    margin-left: 5px;
+  }
+  
+.about {
+    display:block;
+    grid-area : about;
+    color: whitesmoke;
+    margin-left: 5px;
+  }
+.about h2{
+    font-family: 'Dancing Script';
+    font-size: 30px;
+}
+
+.education {
+    display:block;
+    grid-area : education;
+    color:whitesmoke;
+    margin-left: 5px;
+  }
+.education h2{
+    font-family: 'Dancing Script';
+    font-size: 30px;
+  }
+  .skills {
+    display:block;
+    grid-area : skills;
+    color: whitesmoke;
+    margin-left: 5px;
+  }
+  .skills h2{
+    font-family: 'Dancing Script';
+    font-size: 30px;
+  }
+  
+  

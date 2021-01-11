@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <title>Personal Portfolio</title>
         <link rel="stylesheet" href="demo.css">
@@ -7,33 +8,65 @@
         <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"> 
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
     </head>
+
+    <!-- body tag that will contain specification for info in body-->
     <body class="index-body">
+
+        <!--to create and hold the logo-->
         <header class="index-header">
            <a href="demo.html"><img src="NewLogo.png" class="logo"></a>
         </header>
+
+        <!--the nav to hold the links to the other pages-->
         <nav class="index-nav">
             <ul>  
+
                 <li><a href="portfolio.html">Portfolio</a></li>  
                 <li><a href="contact.html">Contact</a></li>  
                 <li><a href="cv.html">Resume</a></li>  
-                <li><a href="sitereport.html">Sitereport</a></li>  
+                <li><a href="sitereport.html">Sitereport</a></li> 
+
             </ul>  
         </nav>
+
         <a class="index-hamburger"></a>
 
-        <main > 
-            <section class="port-content">
-                
-            </section>
+        <!--this holds code for the contact form-->
+        <main class="contact-content"> 
+            
+                <div class="contact-title">
 
-            <img src="wall2.png" class="wallpaper">
+                    <h1>Contact Me</h1>
+                    <p>I'll get back to you</p>
+
+                </div>
+
+                <!--this creates the form-->
+                <div class="contact-form">
+
+                  <form class="form-content" method="POST" action="">
+
+                    <input name="name" type="text" class="form-code" placeholder="Enter Your Name" required><br>
+
+                    <input name="email" type="email" class="form-code" placeholder="Enter Your email" required><br>
+
+                    <textarea name="message" class="form-code" placeholder="Message" rows="4" required></textarea><br>
+
+                    <input type="Submit"  class="form-code" value="Submit" >
+
+                  </form>
+                </div>
+            
         </main>
-        <footer class="port-foot">
-            <section class="contact-links">
-            <a href=""><img src="">Twitter</a>
-            <a href=""><img src="">Instagram</a>
-            <a href=""><img src="">Facebook</a>
-            </section>
+
+        <footer class="index-foot">
+
+            <ul class="contact-links">
+            <li><a href=""><img src="">Twitter</a></li>
+            <li><a href=""><img src="">Instagram</a></li>
+            <li><a href=""><img src="">Facebook</a></li>
+            </ul>
+
         </footer>
     </body>
 </html>
