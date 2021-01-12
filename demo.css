@@ -3,6 +3,27 @@
     padding:0;
     text-decoration: 0;
 }
+.index-hamburger:before {
+    content: '';
+     position: absolute;
+     width: 100%;
+     top: 0.3em;
+     left: 0px;
+     border-top: 0.2em solid #fff;
+     float:right;
+}
+
+.index-hamburger{
+    position:relative;
+    height: 0.8em;
+    width: 1.25em;
+    display: block;
+     border-top: 0.2em solid white;
+    border-bottom: 0.2em solid white;
+    border-radius: 0.1em;
+    float: right;
+ }
+
 .logo{
     width: 160px;
     cursor: pointer;
@@ -12,7 +33,7 @@
     display:grid;   
 }
 .index-header{
-    background-color: #a6a6a6;
+    background-color: #009d9a;
     width:100%;
     height:75;
 }
@@ -97,12 +118,12 @@ main .index-button{
     height: 160px;
     cursor: pointer;
     display: block;
-    background-color: #a6a6a6;
+    background-color: #009d9a;
     padding-left: 80px;
 }
 
 header{
-    background-color:#a6a6a6;
+    background-color: #009d9a;
 }
 
 /** sets display grid for the body**/
@@ -116,7 +137,7 @@ body .port-body{
 }
 
 header .port-header{
-    background-color: #a6a6a6;
+    background-color:#009d9a;
     width:100%;
     height:160px;
     grid-area: port-header;
@@ -126,7 +147,7 @@ header .port-header{
 header .port-header .logo{
   width:160px;
   text-align: center;
-  background-color: #a6a6a6;
+  background-color: #009d9a;
 }
 
 nav .port-nav{
@@ -178,14 +199,6 @@ main .port-content{
    position: absolute;
    
 }
-
-/**main .wallpaper{
-    height: 70%;
-    position: absolute;
-    bottom: 0;
-    right: 0px;
-    transition: 30ms;
-}**/
 
 main .port-content .image-box{
     background-image: url(iceberg.jpg);
@@ -259,6 +272,13 @@ main .image-box1{
     .port-content{
         align-content: center;
     }
+    .index-hamburger:before {
+        display: none;
+    }
+    
+    .index-hamburger{
+        display:none;
+     }
 }
 
 /**css styles are for Contact page**/
@@ -471,9 +491,10 @@ main .cv-wallpaper{
     display: none;
 }
 
-/** this is to specify thr style for desktop screens**/
+/** this is to specify the style for desktop screens**/
 @media only screen and (min-width: 1000px){
 main .cv-wallpaper{
+   
     height: 60%;
     position: absolute;
     bottom: 0;
