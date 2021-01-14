@@ -65,7 +65,7 @@
 .index-content{
    width:100%;
    height: calc(100vh - 100px);
-   background-image: url(coderimage.png);
+   background-image: url(images/coderimage.png);
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
@@ -202,12 +202,12 @@ main .port-content{
 }
 
 main .port-content .image-box{
-    background-image: url(iceberg.jpg);
+    background-image: url(images/iceberg.jpg);
     
 }
 
 main .port-content .image-box1{
-    background-image: url(99791.jpg);
+    background-image: url(images/99791.jpg);
     background-size: cover;
 }
 
@@ -495,17 +495,24 @@ main .cv-wallpaper{
 }
 
 /**these styles are for the sitereport**/
- main .site-main{
+.site-body{
+    background-color: black;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: auto;
+    grid-template-areas:"site-header site-header site-header"
+                        "site-nav site-nav site-nav"
+                        "site-main site-main site-main ";
+}
+main .site-main{
     color: whitesmoke;
     width:100%;
     height: calc(100vh - 100px);
+    background-color: #111;
  }
-
- div{
-     display: block;
-     float: left;
- }
-
+.site-main{
+    grid-area:site-main;
+}
  .site-main h2{
      font-family: 'Dancing Script';
      font-size: 40px;
@@ -518,20 +525,67 @@ main .cv-wallpaper{
      text-shadow: 2px 2px 10px #111;
  }
 
- .site-main p{
-     color:whitesmoke;
- }
 
- .imagepic{
-    margin: 2px 2px 0;
-    height: 200px;
-    padding: 5px;
- }
+@media only screen and (min-width: 100px){
+.site-main p{
+        color:whitesmoke;
+    }
+   
+    
+.site-main .report{
+       padding: 30px;
+     
+   }
+.site-main .images1{
+       margin: 0 auto;
+       width: 1000px;
+   }
+.index-img{
+        width:300px;
+        padding:30px;
+    }
+.site-header{
+       grid-area:site-header;
+   }
+.site-header{
+       background-color: #009d9a;
+       width:100%;
+       height:150px;
+   }
+.site-header .logo{
+     width:160px;
+     text-align: center;
+     padding-left: 80px;
+   }
+.site-nav{
+       width:100%;
+       grid-area: site-nav;
+       height: 35px;
+       background-color: whitesmoke;
+   }
+.site-nav ul{
+       margin: 0 auto;
+       display: block;
+   }
+.site-nav ul li{
+     display:block; 
+     float: left;
+     list-style: none;
+     padding: 0 10px;
+     text-align: center;
+   }
+   /** styles for nav links**/
+.site-nav ul li a{
+       font-family:'Dancing Script', cursive;
+       font-size: 22px;
+       font-weight: 900;
+       color: #111;
+   }
+   .site-main .images2{
+    margin: 0 auto;
+    width: 1000px;
+}
+    
+}
 
- .site-main image{
-    width: calc(50% - 60px);
- }
- .site-main .image1{
-    width: calc(50% - 60px);
- }
 }
