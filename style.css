@@ -496,18 +496,13 @@ main .cv-wallpaper{
 
 /**these styles are for the sitereport**/
 .site-body{
-    background-color: black;
+    background-color: #111;
     display: grid;
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: auto;
-    grid-template-areas:"site-header site-header site-header"
-                        "site-nav site-nav site-nav"
-                        "site-main site-main site-main ";
+    
 }
 main .site-main{
     color: whitesmoke;
     width:100%;
-    height: calc(100vh - 100px);
     background-color: #111;
  }
 .site-main{
