@@ -1,16 +1,14 @@
-function fade(){
+function myKeyDown(){
     var element = document.getElementById('circle');
-    var circleOpacity = parseFloat(element.style.opacity);
-    element.style.opacity = circleOpacity - 0.01;  
+    var moveLeft = element.offsetLeft;
+    element.style.left = moveLeft- 10 +'px';
  }
- function timer(){
+/* function timer(){
      setInterval(fade, 50);
- }
+ }*/
  
- function myLoadEvent() {
-   var element = document.getElementById('circle');
-   element.addEventListener('click', timer);
-   element.style.opacity = 1;
- }
- 
- document.addEventListener('DOMContentLoaded', myLoadEvent);
+ /*function myLoadEvent() {
+   document.addEventListener('keydown', myKeyDown);
+ }*/
+ document.addEventListener('keydown', myKeyDown);
+ //document.addEventListener('DOMContentLoaded', myLoadEvent);
