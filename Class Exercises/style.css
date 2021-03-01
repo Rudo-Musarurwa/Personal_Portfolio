@@ -1,8 +1,11 @@
-body {margin: 0; 
+body {
+    margin: 0; 
 	padding: 0;
 	background-image: url(background.jpg); 
-	font-family: calibri, helvetica, sans-serif;}
-
+	font-family: calibri, helvetica, sans-serif;
+    background-color: black;
+}
+      
 #circle {border-radius: 100%; 
 	width: 200px; 
 	height: 200px; 

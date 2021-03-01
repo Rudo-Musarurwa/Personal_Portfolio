@@ -4,7 +4,7 @@ function fade(){
     element.style.opacity = circleOpacity - 0.01;  
  }
  function timer(){
-     setInterval(fade, 100);
+     setInterval(fade, 50);
  }
  
  function myLoadEvent() {
