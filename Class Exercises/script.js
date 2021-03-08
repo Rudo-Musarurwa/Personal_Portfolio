@@ -18,19 +18,20 @@ function moveUp(){
     var upMove = element.offsetTop;
     element.style.top = upMove - 1 + 'px';
 }
-
+var interval = 0;
 function myKeyDown(event){
+    clearInterval(interval);
     if (event.keyCode == 37){
-       setInterval(moveLeft, 100); 
+      interval = setInterval(moveLeft, 10); 
     }
     if (event.keyCode == 39){
-        setInterval(moveRight, 100);
+        interval = setInterval(moveRight, 10);
     }
     if (event.keyCode == 38){
-        setInterval(moveUp, 100);  
+        interval = setInterval(moveUp, 10);  
     }
     if (event.keyCode == 40){
-        setInterval(moveDown, 100);
+        interval = setInterval(moveDown, 10);
     }
  }
 
