@@ -1,23 +1,15 @@
 function moveInterval(){
     if(leftPressed == true){
-        var circle = document.getElementById('circle');
-        var moveleft = parseFloat(circle.offsetLeft);
-        circle.style.left = moveleft - 1 +'px';
+        moveLeft();
     }
     if(rightPressed == true){
-        var circle = document.getElementById('circle');
-        var moveRight = parseFloat(circle.offsetLeft);
-        circle.style.left = moveRight + 1 +'px';
+        moveRight();
     }
     if(upPressed == true){
-        var circle = document.getElementById('circle');
-        var moveUp = parseFloat(circle.offsetTop);
-        circle.style.top = moveUp - 1 +'px';
+        moveUp();
     }
     if(downPressed == true){
-        var circle = document.getElementById('circle');
-        var moveDown = parseFloat(circle.offsetTop);
-        circle.style.top = moveDown + 1 +'px';
+        moveDown();
     }
 }
 
@@ -56,7 +48,49 @@ function myKeyDown(event){
         downPressed = false;
     }
 }
-
+function moveLeft(){
+    var element = document.getElementById('circle');
+        var leftMove = element.offsetLeft;
+        element.style.left = leftMove - 1 + 'px';
+    
+        if(leftMove == 0){
+            clearInterval(interval);
+            interval = setInterval(moveRight, 10);
+        }
+    }
+    
+    function moveRight(){
+        var element = document.getElementById('circle');
+        var rightMove = element.offsetLeft;
+        element.style.left = rightMove + 1 + 'px';
+    
+        if(element.offsetLeft+element.offsetWidth == window.innerWidth){
+            clearInterval(interval);
+            interval = setInterval(moveLeft, 10);
+        }
+    }
+    
+    function moveDown(){
+        var element = document.getElementById('circle');
+        var downMove = element.offsetTop;
+        element.style.top = downMove + 1 + 'px';   
+    
+        if(element.offsetTop+element.offsetHeight == window.innerHeight){
+            clearInterval(interval);
+            interval = setInterval(moveUp, 10);
+        }
+    }
+    
+    function moveUp(){
+        var element = document.getElementById('circle');
+        var upMove = element.offsetTop;
+        element.style.top = upMove - 1 + 'px';
+    
+        if(upMove == 0){
+            clearInterval(interval);
+            interval = setInterval(moveDown, 10);
+        }
+    }
  function myLoadEvent(){
     
      document.addEventListener('keydown', myKeyDown);
