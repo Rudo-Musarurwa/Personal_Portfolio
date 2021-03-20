@@ -2,7 +2,7 @@ var leftPressed = false;
 var rightPressed = false;
 var upPressed = false;
 var downPressed = false;
-var lastPressed = false;
+var lastPressed;
 
 function myKeyUp(event){
     var player = document.getElementById('player');
@@ -80,18 +80,22 @@ function myKeyDown(event){
     var player = document.getElementById('player');
     player.getElementsByClassName('head')[0].style.backgroundImage = 'url(images/head0.png)';
  }
+
  function movehead1(){
     var player = document.getElementById('player');
     player.getElementsByClassName('head')[0].style.backgroundImage = 'url(images/head1.png)';
  }
+
  function movehead2(){
     var player = document.getElementById('player');
     player.getElementsByClassName('head')[0].style.backgroundImage = 'url(images/head2.png)';
  }
+
  function movehead3(){
     var player = document.getElementById('player');
     player.getElementsByClassName('head')[0].style.backgroundImage = 'url(images/head3.png)';
  }
+
  function movehead4(){
     var player = document.getElementById('player');
     player.getElementsByClassName('head')[0].style.backgroundImage = 'url(images/head4.png)';
@@ -101,18 +105,22 @@ function myKeyDown(event){
     var player = document.getElementById('player');
     player.getElementsByClassName('body')[0].style.backgroundImage = 'url(images/body0.png)';
  }
+
  function movebody1(){
     var player = document.getElementById('player');
     player.getElementsByClassName('body')[0].style.backgroundImage = 'url(images/body1.png)';
  }
+
  function movebody2(){
     var player = document.getElementById('player');
     player.getElementsByClassName('body')[0].style.backgroundImage = 'url(images/body2.png)';
  }
+
  function movebody3(){
     var player = document.getElementById('player');
     player.getElementsByClassName('body')[0].style.backgroundImage = 'url(images/body3.png)';
  }
+
  function movebody4(){
     var player = document.getElementById('player');
     player.getElementsByClassName('body')[0].style.backgroundImage = 'url(images/body4.png)';
@@ -156,4 +164,5 @@ function myKeyDown(event){
     timer = setInterval(moveInterval, 10);
 
  }
+
 document.addEventListener('DOMContentLoaded', myLoadEvent);
