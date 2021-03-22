@@ -1,0 +1,162 @@
+*{
+    color: white;
+    background-color: black;
+}
+body{
+    display:grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: auto;
+    grid-template-areas:"header header header"
+                        "nav nav nav"
+                        "main main aside"
+                        "footer footer aside";
+    font-family: Georgia, serif;
+   
+}
+
+
+Nav{ 
+    grid-area:nav;
+    float: right;
+   
+}
+main{
+    grid-area:main;  
+}
+
+aside{
+    grid-area:aside;
+    background-color: teal;
+}
+aside h2{
+    background-color: teal;
+    text-align: center;
+    font-size: 30px;
+}
+aside ul li{
+    background-color: teal;
+    border: none;
+    display:inline-flex;
+    margin:20px;
+}
+aside ul{
+    background-color: teal;
+}
+footer{
+    grid-area:footer;
+  
+}
+
+header {
+    display:block;
+    padding:5px;
+    margin:10px;
+    font-size:35px;
+    grid-area:header;
+    background-color: teal ;
+}
+
+
+.title{
+    display:block;
+    text-align: center;
+}
+.index-about{
+    text-align: left;
+    margin: 10%;
+}
+.index-about h1{
+    font-size: 75px;
+    font-weight: 100;
+    margin: 15px;
+    color:whitesmoke;
+}
+.index-about p{
+    font-size: 50px;
+    color: teal;
+    margin: 20px;
+}
+.index-about .index-button{
+    display: inline-block;
+    background: linear-gradient(45deg, black black);
+    border-radius: 6px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    box-shadow: 3px 8px 22px rgb(121, 18, 121);
+    border:5px solid rgb(121, 18, 121);
+}
+
+header h1 {
+    display: block;
+    background-color: teal;
+    background: transparent;
+    font-style: oblique 40deg;
+    margin:20px;
+    Border: 5px; 
+}
+
+p{
+    
+    margin:30px;
+}
+
+li{
+    display:block;
+    font-weight: bolder;
+    
+    margin:20px;
+    
+    border:5px solid rgb(121, 18, 121);
+}
+
+a {
+    
+}
+a:hover {
+    color:#bc1823;
+    }
+/* Sets the background to red when the body
+isn't targeted */
+body {
+    
+}
+/* Sets the background to green when the body
+    is targeted */
+body:target {
+    
+}
+
+/*
+When the target isn't set, hide the "off"
+button and show the "on" button
+*/
+#clicked .on {display: block;}
+#clicked .off {display: none;}
+/*
+When the target is set, hide the "on"
+button and show the "off" button
+*/
+#clicked:target .on {display: none;}
+#clicked:target .off {display: block;}
+nav ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    text-align: center;
+ }
+ nav > ul > li {
+    position: relative;
+}
+nav ul ul {
+    position: absolute;
+    display: block;
+    padding: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    pointer-events: none;
+}
+nav > ul > li:hover ul {
+    opacity: 1;
+    pointer-events: auto;
+}

@@ -2,7 +2,7 @@ var leftPressed = false;
 var rightPressed = false;
 var upPressed = false;
 var downPressed = false;
-var lastPressed;
+var lastPressed = false;
 
 function myKeyUp(event){
     var player = document.getElementById('player');
@@ -127,7 +127,7 @@ function myKeyDown(event){
  }
 
  function myLoadEvent(){
-    var player = document.getElementById('player');
+    //var player = document.getElementById('player');
 
     var head0 = document.getElementById('head0');
     head0.addEventListener('click', movehead0);
