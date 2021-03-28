@@ -26,7 +26,7 @@ function myKeyUp(event){
         lastPressed = 'down';
     }
 
-    player.className = 'character stand' + lastPressed;
+    player.className = 'character stand ' + lastPressed;
 }
 
 function moveInterval(){
@@ -34,24 +34,52 @@ function moveInterval(){
     var leftMove = player.offsetLeft;
     var upMove = player.offsetTop;
 
-    if(leftPressed){
-        player.style.left = leftMove - 1 + 'px';
+    if(leftPressed == true){
+        newLeft = leftMove - 1;
+        var element = document.elementFromPoint(newLeft, player.offsetTop);
+        if(element.classList.contains('solid') == false){
+           player.style.left = newLeft + 'px';
+        }
         player.className = 'character walk left';
     }
 
-    if(rightPressed){
-        player.style.left = leftMove + 1 + 'px';
+    if(rightPressed == true){
+        newLeft = leftMove + 1;
+        var element = document.elementFromPoint(newLeft+32, player.offsetTop);
+        
+        if (element.classList.contains('solid') == false){
+            player.style.left = newLeft + 'px';
+        }
+        
         player.className = 'character walk right';
     }
 
-    if(upPressed){
-        player.style.top = upMove - 1 + 'px';
-        player.className = 'character walk up';
+    if(upPressed == true){
+        var newTop = upMove - 1;
+        var element = document.elementFromPoint(player.offsetLeft, newTop);
+   
+        if (element.classList.contains('solid') == false){
+            player.style.top = newTop + 'px';
+        }
+        if (leftPressed == false){
+            if (rightPressed == false){
+                player.className = 'character walk up';
+            }
+        }
     }
 
     if(downPressed){
-        player.style.top = upMove + 1 + 'px';
-        player.className = 'character walk down';
+        var newTop = upMove + 1;
+        var element = document.elementFromPoint(player.offsetLeft, newTop+32);
+        
+        if (element.classList.contains('solid') == false){
+            player.style.top = newTop + 'px';
+        }
+        if (leftPressed == false){
+            if (rightPressed == false){
+                player.className = 'character walk down';
+            }
+        }
     }
 }
 
