@@ -116,18 +116,20 @@ function myKeyDown(event){
 
  
  function myLoadEvent(){
-    var elements = document.getElementsByTagName('li');
-     elements[0].addEventListener('click', clickhead);
-     elements[1].addEventListener('click', clickhead);
-     elements[2].addEventListener('click', clickhead);
-     elements[3].addEventListener('click', clickhead);
-     elements[4].addEventListener('click', clickhead);
-     elements[5].addEventListener('click', movebody);
-     elements[6].addEventListener('click', movebody);
-     elements[7].addEventListener('click', movebody);
-     elements[8].addEventListener('click', movebody);
-     elements[9].addEventListener('click', movebody);
-    
+    var heads = document.getElementsByClassName('heads');
+    var elements = heads[0].getElementsByTagName('li');
+
+    for( var i = 0; i < elements.length; i++){
+        elements[i].addEventListener('click', movehead)
+    }
+
+    var body = document.getElementsByClassName('bodies');
+    var elements = body[0].getElementsByTagName('li');
+
+    for( var i = 0; i < elements.length; i++){
+        elements[i].addEventListener('click', movebody)
+    }
+
     document.addEventListener('keydown', myKeyDown);
     document.addEventListener('keyup', myKeyUp); 
     timer = setInterval(moveInterval, 10);
