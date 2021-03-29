@@ -104,88 +104,29 @@ function myKeyDown(event){
         }  
  }
 
- function movehead0(){
-    var player = document.getElementById('player');
-    player.getElementsByClassName('head')[0].style.backgroundImage = 'url(images/head0.png)';
+ function movehead(){
+    var head = document.getElementsByClassName('head');
+    head[0].style.backgroundImage = 'url(images/'+this.id+'.png)';
  }
 
- function movehead1(){
-    var player = document.getElementById('player');
-    player.getElementsByClassName('head')[0].style.backgroundImage = 'url(images/head1.png)';
+ function movebody(){
+    var body = document.getElementsByClassName('body');
+    body[0].style.backgroundImage = 'url(images/'+this.id+'.png)';
  }
 
- function movehead2(){
-    var player = document.getElementById('player');
-    player.getElementsByClassName('head')[0].style.backgroundImage = 'url(images/head2.png)';
- }
-
- function movehead3(){
-    var player = document.getElementById('player');
-    player.getElementsByClassName('head')[0].style.backgroundImage = 'url(images/head3.png)';
- }
-
- function movehead4(){
-    var player = document.getElementById('player');
-    player.getElementsByClassName('head')[0].style.backgroundImage = 'url(images/head4.png)';
- }
-
- function movebody0(){
-    var player = document.getElementById('player');
-    player.getElementsByClassName('body')[0].style.backgroundImage = 'url(images/body0.png)';
- }
-
- function movebody1(){
-    var player = document.getElementById('player');
-    player.getElementsByClassName('body')[0].style.backgroundImage = 'url(images/body1.png)';
- }
-
- function movebody2(){
-    var player = document.getElementById('player');
-    player.getElementsByClassName('body')[0].style.backgroundImage = 'url(images/body2.png)';
- }
-
- function movebody3(){
-    var player = document.getElementById('player');
-    player.getElementsByClassName('body')[0].style.backgroundImage = 'url(images/body3.png)';
- }
-
- function movebody4(){
-    var player = document.getElementById('player');
-    player.getElementsByClassName('body')[0].style.backgroundImage = 'url(images/body4.png)';
- }
-
+ 
  function myLoadEvent(){
-    //var player = document.getElementById('player');
-
-    var head0 = document.getElementById('head0');
-    head0.addEventListener('click', movehead0);
-
-    var head1 = document.getElementById('head1');
-    head1.addEventListener('click', movehead1);
-
-    var head2 = document.getElementById('head2');
-    head2.addEventListener('click', movehead2);
-
-    var head3 = document.getElementById('head3');
-    head3.addEventListener('click', movehead3);
-
-    var head4 = document.getElementById('head4');
-    head4.addEventListener('click', movehead4);
-
-    var body0 = document.getElementById('body0');
-    body0.addEventListener('click', movebody0);
-
-    var body1 = document.getElementById('body1');
-    body1.addEventListener('click', movebody1);
-
-    var body2 = document.getElementById('body2');
-    body2.addEventListener('click', movebody2);
-
-    var body3 = document.getElementById('body3');
-    body3.addEventListener('click', movebody3);
-
-    var body4 = document.getElementById('body4');
-    body4.addEventListener('click', movebody4);
+    var elements = document.getElementsByTagName('li');
+     elements[0].addEventListener('click', clickhead);
+     elements[1].addEventListener('click', clickhead);
+     elements[2].addEventListener('click', clickhead);
+     elements[3].addEventListener('click', clickhead);
+     elements[4].addEventListener('click', clickhead);
+     elements[5].addEventListener('click', movebody);
+     elements[6].addEventListener('click', movebody);
+     elements[7].addEventListener('click', movebody);
+     elements[8].addEventListener('click', movebody);
+     elements[9].addEventListener('click', movebody);
     
     document.addEventListener('keydown', myKeyDown);
     document.addEventListener('keyup', myKeyUp); 
