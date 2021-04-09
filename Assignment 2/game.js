@@ -99,8 +99,14 @@ function keydown(event) {
 	}
 }
 
+function startEvent(){
+	var start = document.getElementsByClassName('start')[0];
+	start.style.opacity = 0;
+}
 
 function myLoadFunction() {
+	var start = document.getElementsByClassName('start')[0];
+	start.addEventListener('click', startEvent);
 	timeout = setInterval(move, 10);
 	document.addEventListener('keydown', keydown);
 	document.addEventListener('keyup', keyup);
