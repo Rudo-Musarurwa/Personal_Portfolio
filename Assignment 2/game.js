@@ -3,6 +3,8 @@ var downPressed = false;
 var leftPressed = false;
 var rightPressed = false;
 var lastPressed = false;
+var startPressed = false;//start button
+var interval = 10;
 
 function keyup(event) {
 	var player = document.getElementById('player');
@@ -80,9 +82,7 @@ function move() {
 
 		player.className = 'character walk right';
 	}
-
 }
-
 
 function keydown(event) {
 	if (event.keyCode == 37) {
@@ -100,17 +100,40 @@ function keydown(event) {
 }
 
 function startEvent(){
-	var start = document.getElementsByClassName('start')[0];
-	start.style.opacity = 0;
+	this.style.display = 'none';	
+	
+	var bomb = document.createElement('div');
+	bomb.style.className = 'bomb';
+
+	var body = document.getElementsByTagName('body')[0];
+	body.appendChild(bomb);
+	
+	var downMove = bomb.offsetTop;
+	bomb.style.top = downMove + 1 + 'px';
 }
 
+
+
 function myLoadFunction() {
-	var start = document.getElementsByClassName('start')[0];
-	start.addEventListener('click', startEvent);
+	var start = document.getElementsByClassName('start');
+	start[0].addEventListener('click', startEvent);
 	timeout = setInterval(move, 10);
 	document.addEventListener('keydown', keydown);
 	document.addEventListener('keyup', keyup);
 }
 
-
 document.addEventListener('DOMContentLoaded', myLoadFunction);
+
+//Create bomb
+	/*var bomb = document.createElement('div');
+	bomb.style.className = 'bomb';
+	var body = document.getElementsByTagName('body')[0];
+    body.appendChild(bomb);*/
+
+//Create bomb
+  /*var body = document.getElementsByTagName('body');
+	var bomb = document.createElement('div');
+	bomb.style.className = 'bomb';
+	body[0].appendChild(bomb);
+	var downMove = bomb.offsetTop;
+	bomb.style.top = downMove + 1 + 'px';*/

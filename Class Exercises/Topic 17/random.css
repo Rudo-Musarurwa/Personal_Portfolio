@@ -1,0 +1,21 @@
+div{
+    height: 100px;
+    width: 100px;
+}
+.square.red{
+    background-color: red;
+}
+.square.black{
+    background-color:black;
+}
+.square.purple{
+    background-color:purple;
+}
+.square.green{
+    background-color: green;
+}
+.square.yellow{
+    background-color: yellow;
+}.square.blue{
+    background-color: blue;
+}
