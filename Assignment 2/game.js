@@ -3,8 +3,6 @@ var downPressed = false;
 var leftPressed = false;
 var rightPressed = false;
 var lastPressed = false;
-var startPressed = false;//start button
-var interval = 10;
 
 function keyup(event) {
 	var player = document.getElementById('player');
@@ -101,22 +99,23 @@ function keydown(event) {
 
 function startEvent(){
 	this.style.display = 'none';	
-	
-	var bomb = document.createElement('div');
-	bomb.style.className = 'bomb';
-
-	var body = document.getElementsByTagName('body')[0];
-	body.appendChild(bomb);
-	
-	var downMove = bomb.offsetTop;
-	bomb.style.top = downMove + 1 + 'px';
+	setInterval(bombfall, 100);
 }
 
-
+function bombfall(){
+	var bomb = document.getElementsByClassName('bomb');
+	bomb.style.display = 'block';
+	var downMove = bomb.offsetTop;
+	bomb.style.Top = downMove + 1 + 'px';
+	//bombfall();
+}
 
 function myLoadFunction() {
+	var bomb = document.getElementsByClassName('bomb');
+	bomb[0].style.display = 'none';
 	var start = document.getElementsByClassName('start');
 	start[0].addEventListener('click', startEvent);
+
 	timeout = setInterval(move, 10);
 	document.addEventListener('keydown', keydown);
 	document.addEventListener('keyup', keyup);
@@ -137,3 +136,29 @@ document.addEventListener('DOMContentLoaded', myLoadFunction);
 	body[0].appendChild(bomb);
 	var downMove = bomb.offsetTop;
 	bomb.style.top = downMove + 1 + 'px';*/
+
+	/*var bomb = document.createElement('div');
+	bomb.style.className = 'bomb';
+
+	var body = document.getElementsByTagName('body')[0];
+	body.appendChild(bomb);
+	
+	var downMove = bomb.offsetTop;
+	bomb.style.top = downMove + 1 + 'px';*/
+
+	/*random width
+	var width = window.innerWidth;
+	var randomNum = Math.ceil(Math.random()*width.length);
+	for(var i =0; i<width.length; i++){}
+	
+	function bombfall(){
+	var bomb = document.getElementsByClassName('bomb');
+	bomb.style.display = 'block';
+	var downMove = bomb.offsetTop;
+	bomb.style.Top = downMove + 1 + 'px';
+	bombfall();
+}
+
+'top of bomb variable' = 'bomb variable'.offsetTop;
+'top of bomb variable' = 'top of bomb variable' + 'speed variable' + 'px';
+'bomb variable'.style.top = 'top of bomb variable' */
