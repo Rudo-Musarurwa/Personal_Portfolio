@@ -43,7 +43,8 @@ aside ul{
 }
 footer{
     grid-area:footer;
-  
+    position: fixed;
+    bottom:0;
 }
 
 header {

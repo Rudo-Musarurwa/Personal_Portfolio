@@ -16,3 +16,203 @@
     border-bottom: 0.2em solid white;
     border-radius: 0.1em;
  }*/
+ *{
+    color: white;
+    background-color: black;
+}
+body{
+    display:grid;
+    
+    width: fit-content;
+    height: fit-content;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: auto;
+    grid-template-areas:"header header header"
+                        "nav nav nav"
+                        "main main aside"
+                        "footer footer aside";
+    font-family: Georgia, serif;
+   
+}
+/*
+.shownav:before {
+    content: '';
+     position: absolute;
+     width: 100%;
+     top: 0.3em;
+     left: 0px;
+     border-top: 0.2em solid #fff;
+}
+
+.shownav {
+    position:relative;
+    height: 0.8em;
+    width: 1.25em;
+    display: block;
+     border-top: 0.2em solid white;
+    border-bottom: 0.2em solid white;
+    border-radius: 0.1em;
+ }*/
+
+Nav{ 
+    grid-area:nav;
+    float: right;
+   
+}
+main{
+    grid-area:main;  
+
+
+    
+    width:50%;
+    
+    margin: 15px;
+}
+
+aside{
+    
+    grid-area:aside;
+    background-color: teal;
+    grid: block;
+    position:relative;
+    right:90%;
+    width:17vh;
+    height:70vh;
+    bottom:0;
+}
+aside h2{
+    background-color: teal;
+    text-align: center;
+    font-size: 30px;
+}
+aside ul li{
+    background-color: teal;
+    border: none;
+    display:inline-block;
+    margin:5px;
+}
+aside ul{
+    background-color: teal;
+}
+footer{
+    grid-area:footer;
+    position: fixed;
+    bottom:0;
+}
+
+header {
+    display:block;
+    padding:5px;
+    margin:10px;
+    font-size:35px;
+    grid-area:header;
+    background-color: teal ;
+}
+header a h1{
+    background-color: teal ;
+}
+
+.title{
+    display:block;
+    text-align: center;
+}
+.index-about{
+    text-align: left;
+    margin: 5%;
+}
+.index-about h1{
+    font-size: 30px;
+    font-weight: 100;
+    margin: 5px;
+    color:whitesmoke;
+}
+.index-about p{
+    font-size: 30px;
+    color: teal;
+    margin: 5px;
+}
+.index-about .index-button{
+    display: inline-block;
+    background: linear-gradient(45deg, black black);
+    border-radius: 6px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    box-shadow: 3px 8px 22px rgb(121, 18, 121);
+    border:5px solid rgb(121, 18, 121);
+}
+
+header h1 {
+    display: block;
+    background-color: teal;
+    background: transparent;
+    font-style: oblique 40deg;
+    font-size: 50px;
+    margin:5px;
+    Border: 5px; 
+}
+
+p{
+    
+    margin:30px;
+}
+
+li{
+    display:block;
+    font-weight: bolder;
+    margin:5px;
+    border:5px solid rgb(121, 18, 121);
+}
+
+a {
+    
+}
+a:hover {
+    color:#bc1823;
+    }
+/* Sets the background to red when the body
+isn't targeted */
+body {
+    
+}
+/* Sets the background to green when the body
+    is targeted */
+body:target {
+    
+}
+
+/*
+When the target isn't set, hide the "off"
+button and show the "on" button
+*/
+#clicked .on {display: block;}
+#clicked .off {display: none;}
+/*
+When the target is set, hide the "on"
+button and show the "off" button
+*/
+#clicked:target .on {display: none;}
+#clicked:target .off {display: block;}
+nav ul {
+    list-style-type: none;
+    display:grid;
+    grid-template-columns: 40% 30% 30%;
+    text-align: center;
+ }
+ nav > ul > li {
+    position: relative;
+}
+nav ul ul {
+    position: absolute;
+    display: block;
+    padding: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    pointer-events: none;
+}
+nav > ul > li:hover ul {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
