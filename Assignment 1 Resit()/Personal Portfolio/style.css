@@ -160,3 +160,63 @@ nav > ul > li:hover ul {
     opacity: 1;
     pointer-events: auto;
 }
+
+.contact-content {
+    width:100%;
+    height: calc(100vh - 100px);
+    background-repeat: no-repeat;
+    background-color: rgb(8, 8, 14);
+    background-position: center;
+    background-size: cover; 
+}
+
+.contact-title{
+    transition: all 4s ease-in-out; 
+}
+
+.contact-title h1{
+    color:whitesmoke;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Dancing Script';
+    text-shadow: 2px 2px black;
+}
+
+.contact-title p{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 40px;
+}
+
+main .contact-form{
+    color:white;
+    text-align: center;
+    margin-top: 50px;
+    transition: all 5s ease-in-out;
+}
+
+.form-code{
+    width:300px;
+    background: 50% transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid gray;
+    color:whitesmoke;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+input{
+    height: 45px;
+}
+
+.port-main div img{
+    width: 400px;
+    height: 400px;
+    margin: 15px;
+}
+
+.port-main div{
+    float: right;
+    margin: 15px;
+}
