@@ -98,67 +98,42 @@ function keydown(event) {
 }
 
 function startEvent(){
-	this.style.display = 'none';	
-	setInterval(bombfall, 100);
+    this.style.display = 'none';    
+    setInterval(createBomb, 1000);
+    
 }
 
-function bombfall(){
-	var bomb = document.getElementsByClassName('bomb');
-	bomb.style.display = 'block';
-	var downMove = bomb.offsetTop;
-	bomb.style.Top = downMove + 1 + 'px';
-	//bombfall();
+function createBomb(){
+    var bomb = document.createElement('div');
+    var body = document.getElementsByTagName('body')[0];
+    body.appendChild(bomb);
+    bomb.classList.add('bomb');
+	var w = window.innerWidth;
+	var randomW = Math.ceil(Math.random()*w);
+	bomb.style.left = randomW + 'px';
+    bombFall = setInterval(function(){
+		var bombTop = bomb.offsetTop;
+		bomb.style.top = bombTop + 1 + 'px';
+        if ()
+	},10);
 }
 
 function myLoadFunction() {
-	var bomb = document.getElementsByClassName('bomb');
-	bomb[0].style.display = 'none';
-	var start = document.getElementsByClassName('start');
-	start[0].addEventListener('click', startEvent);
-
-	timeout = setInterval(move, 10);
-	document.addEventListener('keydown', keydown);
-	document.addEventListener('keyup', keyup);
+    var start = document.getElementsByClassName('start')[0];
+    start.addEventListener('click', startEvent);
+    timeout = setInterval(move, 10);
+    document.addEventListener('keydown', keydown);
+    document.addEventListener('keyup', keyup);
 }
 
 document.addEventListener('DOMContentLoaded', myLoadFunction);
 
-//Create bomb
-	/*var bomb = document.createElement('div');
-	bomb.style.className = 'bomb';
-	var body = document.getElementsByTagName('body')[0];
-    body.appendChild(bomb);*/
 
-//Create bomb
-  /*var body = document.getElementsByTagName('body');
-	var bomb = document.createElement('div');
-	bomb.style.className = 'bomb';
-	body[0].appendChild(bomb);
-	var downMove = bomb.offsetTop;
-	bomb.style.top = downMove + 1 + 'px';*/
 
-	/*var bomb = document.createElement('div');
-	bomb.style.className = 'bomb';
 
-	var body = document.getElementsByTagName('body')[0];
-	body.appendChild(bomb);
-	
-	var downMove = bomb.offsetTop;
-	bomb.style.top = downMove + 1 + 'px';*/
 
-	/*random width
-	var width = window.innerWidth;
-	var randomNum = Math.ceil(Math.random()*width.length);
-	for(var i =0; i<width.length; i++){}
-	
-	function bombfall(){
-	var bomb = document.getElementsByClassName('bomb');
-	bomb.style.display = 'block';
-	var downMove = bomb.offsetTop;
-	bomb.style.Top = downMove + 1 + 'px';
-	bombfall();
-}
 
-'top of bomb variable' = 'bomb variable'.offsetTop;
-'top of bomb variable' = 'top of bomb variable' + 'speed variable' + 'px';
-'bomb variable'.style.top = 'top of bomb variable' */
+
+
+
+
