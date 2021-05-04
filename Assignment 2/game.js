@@ -77,8 +77,9 @@ function move() {
 		if (element.classList.contains('sky') == false) {
 			player.style.left = newLeft + 'px';		
 		}
-
+        
 		player.className = 'character walk right';
+		
 	}
 }
 
@@ -99,23 +100,53 @@ function keydown(event) {
 
 function startEvent(){
     this.style.display = 'none';    
-    setInterval(createBomb, 1000);
-    
+    createBomb = setInterval(createBomb, 1000); 
 }
 
+//creates the bomb
+var bombSpeed = 10;
 function createBomb(){
+	
     var bomb = document.createElement('div');
     var body = document.getElementsByTagName('body')[0];
+	var w = window.innerWidth; //window height
+	var h = window.innerHeight;// window width
+	var sky = (4/5)*h;
+	var randomW = Math.ceil(Math.random()*w);//random width of the screen
     body.appendChild(bomb);
-    bomb.classList.add('bomb');
-	var w = window.innerWidth;
-	var randomW = Math.ceil(Math.random()*w);
+    bomb.classList.add('bomb');//bomb element created 
 	bomb.style.left = randomW + 'px';
-    bombFall = setInterval(function(){
-		var bombTop = bomb.offsetTop;
-		bomb.style.top = bombTop + 1 + 'px';
-        if ()
-	},10);
+	//bombs drop
+    var bombFall= setInterval(
+		function (){
+		var downMove = bomb.offsetTop;
+		bomb.style.top = downMove + 1 + 'px';
+		if(bomb.offsetTop+bomb.offsetHeight > sky){
+			clearInterval(bombFall);
+			bomb.className = 'explosion';
+			var bombRemove = setInterval(
+			function(){
+			clearInterval(bombRemove);
+			body.removeChild(bomb);
+			},1000);
+			playerDead();
+		}
+			
+	},bombSpeed);
+}
+
+function playerDead(){
+	var player = document.getElementById('player');
+	var positionTop = player.offsetTop;
+	var newTop = positionTop + 1;
+	var lives = 3;
+
+    var element = document.elementFromPoint(player.offsetLeft, newTop);
+    if(element.classList.contains('explosion')==true && lives > 0){
+		player.className= 'character hit';
+		
+
+	}
 }
 
 function myLoadFunction() {
@@ -127,12 +158,6 @@ function myLoadFunction() {
 }
 
 document.addEventListener('DOMContentLoaded', myLoadFunction);
-
-
-
-
-
-
 
 
 
