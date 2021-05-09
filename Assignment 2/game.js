@@ -100,11 +100,12 @@ function keydown(event) {
 
 function startEvent(){
     this.style.display = 'none';    
-    createBomb = setInterval(createBomb, 1000); 
+    createBomb = setInterval(createBomb, 500); 
 }
-
 //creates the bomb
-var bombSpeed = 10;
+var bombSpeed = 5;
+var characterhit = false;
+var lives = 3;
 function createBomb(){
 	
     var bomb = document.createElement('div');
@@ -113,6 +114,7 @@ function createBomb(){
 	var h = window.innerHeight;// window width
 	var sky = (4/5)*h;
 	var randomW = Math.ceil(Math.random()*w);//random width of the screen
+	var randomH = Math.ceil(Math.random()*(h - sky)+sky);
     body.appendChild(bomb);
     bomb.classList.add('bomb');//bomb element created 
 	bomb.style.left = randomW + 'px';
@@ -121,7 +123,8 @@ function createBomb(){
 		function (){
 		var downMove = bomb.offsetTop;
 		bomb.style.top = downMove + 1 + 'px';
-		if(bomb.offsetTop+bomb.offsetHeight > sky){
+		var element = document.elementFromPoint(bomb.offsetLeft, downMove);
+		if(bomb.offsetTop+bomb.offsetHeight == randomH || element.classList.contains('solid') == true){
 			clearInterval(bombFall);
 			bomb.className = 'explosion';
 			var bombRemove = setInterval(
@@ -129,24 +132,36 @@ function createBomb(){
 			clearInterval(bombRemove);
 			body.removeChild(bomb);
 			},1000);
-			playerDead();
+			playerHit();
 		}
 			
 	},bombSpeed);
 }
 
-function playerDead(){
+function playerHit(){
 	var player = document.getElementById('player');
 	var positionTop = player.offsetTop;
 	var newTop = positionTop + 1;
-	var lives = 3;
-
     var element = document.elementFromPoint(player.offsetLeft, newTop);
-    if(element.classList.contains('explosion')==true && lives > 0){
-		player.className= 'character hit';
-		
-
+    if(element.classList.contains('explosion')==true || element.classList.contains('bomb') == true){
+		player.className = 'character dead';
+		endGame();
 	}
+}
+
+function endGame(){
+	clearInterval(createBomb);	 
+	var gameEnd = document.createElement('h1');
+    var body = document.getElementsByTagName('body')[0];
+	gameEnd.style.color = 'white';
+	gameEnd.style.position = 'absolute';
+	gameEnd.style.fontsize = 60+'px';
+	gameEnd.style.marginleft = 'auto';
+	gameEnd.style.marginright = 'auto';
+	body.appendChild(gameEnd);
+    gameEnd.classList.add('h1');
+	alert('Game over. Reload Page.')
+
 }
 
 function myLoadFunction() {
@@ -156,9 +171,4 @@ function myLoadFunction() {
     document.addEventListener('keydown', keydown);
     document.addEventListener('keyup', keyup);
 }
-
 document.addEventListener('DOMContentLoaded', myLoadFunction);
-
-
-
-
