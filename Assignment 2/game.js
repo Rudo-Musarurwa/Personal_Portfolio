@@ -150,17 +150,36 @@ function playerHit(){
 }
 
 function endGame(){
-	clearInterval(createBomb);	 
-	var gameEnd = document.createElement('h1');
+	bombSpeed = 0;
+	clearInterval(createBomb);//stops bombs 
+	clearInterval(timeout);	 
+	var gameEnd = document.createElement('div');
     var body = document.getElementsByTagName('body')[0];
-	gameEnd.style.color = 'white';
+	//create game over button
+    var textnode = document.createTextNode('Game Over!!');
+    gameEnd.style.color = 'white';
 	gameEnd.style.position = 'absolute';
-	gameEnd.style.fontsize = 60+'px';
-	gameEnd.style.marginleft = 'auto';
-	gameEnd.style.marginright = 'auto';
+	gameEnd.style.fontSize = '50px';
+	gameEnd.style.marginLeft = 'auto';
+	gameEnd.style.marginRight = 'auto';
+	gameEnd.style.width = '20vw';
+	gameEnd.style.backgroundColor ='#ccc';
+	gameEnd.style.zIndex = '1000';
+	gameEnd.style.textAlign ='center';
+	gameEnd.style.left = '50%';
+	gameEnd.style.marginLeft = '-10vw';
+	gameEnd.style.top = '50%';
+	gameEnd.style.marginTop = '-1em';
+	gameEnd.style.fontFamily = 'Anton';
+	gameEnd.style.cursor = 'pointer';
+	gameEnd.style.borderRadius = '20px';
+	gameEnd.style.boxShadow = '4px 4px 4px #000';
+	gameEnd.style.display = "block";
+	gameEnd.append(textnode);
 	body.appendChild(gameEnd);
-    gameEnd.classList.add('h1');
-	alert('Game over. Reload Page.')
+    gameEnd.classList.add("gameover");
+	var restart = document.getElementsByClassName('gameover');
+	restart.addEventListener('click', myLoadFunction);
 
 }
 
@@ -172,3 +191,4 @@ function myLoadFunction() {
     document.addEventListener('keyup', keyup);
 }
 document.addEventListener('DOMContentLoaded', myLoadFunction);
+
