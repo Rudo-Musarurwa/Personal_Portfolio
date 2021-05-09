@@ -108,36 +108,14 @@ li{
     
     border:5px solid rgb(121, 18, 121);
 }
-
-a {
-    
-}
-a:hover {
-    color:#bc1823;
-    }
-/* Sets the background to red when the body
-isn't targeted */
-body {
-    
-}
-/* Sets the background to green when the body
-    is targeted */
-body:target {
-    
+img{
+    width: 450px;
+    height: 250px;
+    float: left;
+    margin: 20px;
+   
 }
 
-/*
-When the target isn't set, hide the "off"
-button and show the "on" button
-*/
-#clicked .on {display: block;}
-#clicked .off {display: none;}
-/*
-When the target is set, hide the "on"
-button and show the "off" button
-*/
-#clicked:target .on {display: none;}
-#clicked:target .off {display: block;}
 nav ul {
     list-style-type: none;
     display: grid;
