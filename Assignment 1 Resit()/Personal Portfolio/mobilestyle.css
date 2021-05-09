@@ -1,21 +1,4 @@
-/*.shownav:before {
-    content: '';
-     position: absolute;
-     width: 100%;
-     top: 0.3em;
-     left: 0px;
-     border-top: 0.2em solid #fff;
-}
 
-.shownav {
-    position:relative;
-    height: 0.8em;
-    width: 1.25em;
-    display: block;
-     border-top: 0.2em solid white;
-    border-bottom: 0.2em solid white;
-    border-radius: 0.1em;
- }*/
  *{
     color: white;
     background-color: black;
@@ -29,30 +12,11 @@ body{
     grid-template-rows: auto;
     grid-template-areas:"header header header"
                         "nav nav nav"
-                        "main main aside"
-                        "footer footer aside";
+                        "main main main"
+                        "footer footer footer";
     font-family: Georgia, serif;
    
 }
-/*
-.shownav:before {
-    content: '';
-     position: absolute;
-     width: 100%;
-     top: 0.3em;
-     left: 0px;
-     border-top: 0.2em solid #fff;
-}
-
-.shownav {
-    position:relative;
-    height: 0.8em;
-    width: 1.25em;
-    display: block;
-     border-top: 0.2em solid white;
-    border-bottom: 0.2em solid white;
-    border-radius: 0.1em;
- }*/
 
 Nav{ 
     grid-area:nav;
@@ -61,19 +25,16 @@ Nav{
 }
 main{
     grid-area:main;  
-
-
-    
-    width:50%;
-    
+    width:100%;
     margin: 15px;
+    
 }
 
 aside{
     
     grid-area:aside;
     background-color: teal;
-    
+    display: none;
     position:relative;
     right:90%;
     width:17vh;
@@ -111,7 +72,13 @@ header {
 header a h1{
     background-color: teal ;
 }
-
+img{
+    width: 300px;
+    height: 150px;
+    float: left;
+    margin: 20px;
+   
+}
 .title{
     display:block;
     text-align: center;
@@ -121,13 +88,13 @@ header a h1{
     margin: 5%;
 }
 .index-about h1{
-    font-size: 30px;
+    font-size: 50px;
     font-weight: 100;
     margin: 5px;
     color:whitesmoke;
 }
 .index-about p{
-    font-size: 30px;
+    font-size: 50px;
     color: teal;
     margin: 5px;
 }
@@ -136,6 +103,7 @@ header a h1{
     background: linear-gradient(45deg, black black);
     border-radius: 6px;
     padding: 10px 20px;
+    margin: 30px;
     box-sizing: border-box;
     box-shadow: 3px 8px 22px rgb(121, 18, 121);
     border:5px solid rgb(121, 18, 121);
@@ -163,35 +131,6 @@ li{
     border:5px solid rgb(121, 18, 121);
 }
 
-a {
-    
-}
-a:hover {
-    color:#bc1823;
-    }
-/* Sets the background to red when the body
-isn't targeted */
-body {
-    
-}
-/* Sets the background to green when the body
-    is targeted */
-body:target {
-    
-}
-
-/*
-When the target isn't set, hide the "off"
-button and show the "on" button
-*/
-#clicked .on {display: block;}
-#clicked .off {display: none;}
-/*
-When the target is set, hide the "on"
-button and show the "off" button
-*/
-#clicked:target .on {display: none;}
-#clicked:target .off {display: block;}
 nav ul {
     list-style-type: none;
     display:grid;
@@ -263,6 +202,6 @@ main .contact-form{
 input{
     height: 45px;
 }
-aside .sidereport-aside{
+.sidereportaside{
     display: none;
 }
